@@ -1,0 +1,42 @@
+version: '3'
+
+services:
+  # NATS Server
+  nats-1:
+    container_name: n1
+    command: --name N1 --cluster_name JSC --js --sd /data --cluster nats://0.0.0.0:4245 --routes nats://n2:4245,nats://n3:4245 -p 4222
+    image: nats:latest
+    volumes:
+      - ./nats-server.conf:/nats-server.conf
+    ports:
+      - "14222:4222"
+      - "18222:8222"
+  nats-2:
+    container_name: n2
+    command: --name N2 --cluster_name JSC --js --sd /data --cluster nats://0.0.0.0:4245 --routes nats://n1:4245,nats://n3:4245 -p 4222
+    image: nats:latest
+    volumes:
+      - ./nats-server.conf:/nats-server.conf
+    ports:
+      - "24222:4222"
+      - "28222:8222"
+  nats-3:
+    container_name: n3
+    command: --name N3 --cluster_name JSC --js --sd /data --cluster nats://0.0.0.0:4245 --routes nats://n1:4245,nats://n2:4245 -p 4222
+    image: nats:latest
+    volumes:
+      - ./nats-server.conf:/nats-server.conf
+    ports:
+      - "34222:4222"
+      - "38222:8222"
+  mqtt:
+    image: eclipse-mosquitto:2
+    container_name: mqtt
+    privileged: true
+    ports:
+      - 1883:1883
+      - 9001:9001
+    volumes:
+        - ./mosquitto.conf:/mosquitto/config/mosquitto.conf
+        - ./mosquitto/data:/mosquitto/data
+        - ./mosquitto/log:/mosquitto/log
