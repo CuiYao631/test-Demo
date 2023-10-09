@@ -14,6 +14,8 @@ require (
 	github.com/segmentio/ksuid v1.0.4
 	github.com/shopspring/decimal v1.3.1
 	github.com/sigurn/crc16 v0.0.0-20211026045750-20ab5afb07e3
+	github.com/stripe/stripe-go v70.15.0+incompatible
+	github.com/stripe/stripe-go/v75 v75.9.0
 	github.com/tidwall/gjson v1.14.4
 	golang.org/x/net v0.11.0
 	google.golang.org/api v0.114.0
