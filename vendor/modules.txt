@@ -40,10 +40,30 @@ firebase.google.com/go/iid
 firebase.google.com/go/internal
 firebase.google.com/go/messaging
 firebase.google.com/go/storage
+# github.com/JuulLabs-OSS/cbgo v0.0.2
+## explicit; go 1.14
+github.com/JuulLabs-OSS/cbgo
+# github.com/creack/goselect v0.1.1
+## explicit; go 1.13
+github.com/creack/goselect
 # github.com/eclipse/paho.mqtt.golang v1.4.2
 ## explicit; go 1.14
 github.com/eclipse/paho.mqtt.golang
 github.com/eclipse/paho.mqtt.golang/packets
+# github.com/fatih/structs v1.1.0
+## explicit
+github.com/fatih/structs
+# github.com/go-ole/go-ole v1.2.4
+## explicit; go 1.12
+github.com/go-ole/go-ole
+# github.com/godbus/dbus/v5 v5.0.3
+## explicit; go 1.12
+github.com/godbus/dbus/v5
+github.com/godbus/dbus/v5/introspect
+github.com/godbus/dbus/v5/prop
+# github.com/gofrs/uuid v4.0.0+incompatible
+## explicit
+github.com/gofrs/uuid
 # github.com/golang-jwt/jwt v3.2.2+incompatible
 ## explicit
 github.com/golang-jwt/jwt
@@ -82,6 +102,12 @@ github.com/googleapis/gax-go/v2/internal
 # github.com/gorilla/websocket v1.5.0
 ## explicit; go 1.12
 github.com/gorilla/websocket
+# github.com/hashicorp/errwrap v1.0.0
+## explicit
+github.com/hashicorp/errwrap
+# github.com/hashicorp/go-multierror v1.0.0
+## explicit
+github.com/hashicorp/go-multierror
 # github.com/klauspost/compress v1.15.15
 ## explicit; go 1.17
 # github.com/labstack/echo/v4 v4.10.2
@@ -103,6 +129,19 @@ github.com/mattn/go-colorable
 # github.com/mattn/go-isatty v0.0.19
 ## explicit; go 1.15
 github.com/mattn/go-isatty
+# github.com/muka/go-bluetooth v0.0.0-20200928120822-44d49b402aee
+## explicit; go 1.14
+github.com/muka/go-bluetooth/api
+github.com/muka/go-bluetooth/api/service
+github.com/muka/go-bluetooth/bluez
+github.com/muka/go-bluetooth/bluez/profile
+github.com/muka/go-bluetooth/bluez/profile/adapter
+github.com/muka/go-bluetooth/bluez/profile/advertising
+github.com/muka/go-bluetooth/bluez/profile/agent
+github.com/muka/go-bluetooth/bluez/profile/device
+github.com/muka/go-bluetooth/bluez/profile/gatt
+github.com/muka/go-bluetooth/props
+github.com/muka/go-bluetooth/util
 # github.com/nats-io/nats-server/v2 v2.9.1
 ## explicit; go 1.19
 # github.com/nats-io/nats.go v1.17.0
@@ -116,6 +155,9 @@ github.com/nats-io/nkeys
 # github.com/nats-io/nuid v1.0.1
 ## explicit
 github.com/nats-io/nuid
+# github.com/pkg/errors v0.9.1
+## explicit
+github.com/pkg/errors
 # github.com/robfig/cron v1.2.0
 ## explicit
 github.com/robfig/cron
@@ -134,6 +176,15 @@ github.com/shopspring/decimal
 # github.com/sigurn/crc16 v0.0.0-20211026045750-20ab5afb07e3
 ## explicit
 github.com/sigurn/crc16
+# github.com/sigurn/crc8 v0.0.0-20160107002456-e55481d6f45c
+## explicit
+github.com/sigurn/crc8
+# github.com/sigurn/utils v0.0.0-20190728110027-e1fefb11a144
+## explicit
+github.com/sigurn/utils
+# github.com/sirupsen/logrus v1.7.0
+## explicit; go 1.13
+github.com/sirupsen/logrus
 # github.com/stretchr/testify v1.8.3
 ## explicit; go 1.20
 # github.com/stripe/stripe-go v70.15.0+incompatible
@@ -164,6 +215,10 @@ github.com/valyala/bytebufferpool
 # github.com/valyala/fasttemplate v1.2.2
 ## explicit; go 1.12
 github.com/valyala/fasttemplate
+# go.bug.st/serial v1.1.1
+## explicit; go 1.13
+go.bug.st/serial
+go.bug.st/serial/unixutils
 # go.opencensus.io v0.24.0
 ## explicit; go 1.13
 go.opencensus.io
@@ -183,6 +238,15 @@ go.opencensus.io/trace
 go.opencensus.io/trace/internal
 go.opencensus.io/trace/propagation
 go.opencensus.io/trace/tracestate
+# gobot.io/x/gobot v1.16.0
+## explicit; go 1.13
+gobot.io/x/gobot
+gobot.io/x/gobot/drivers/aio
+gobot.io/x/gobot/drivers/gpio
+gobot.io/x/gobot/drivers/i2c
+gobot.io/x/gobot/platforms/ble
+gobot.io/x/gobot/platforms/firmata
+gobot.io/x/gobot/platforms/firmata/client
 # golang.org/x/crypto v0.10.0
 ## explicit; go 1.17
 golang.org/x/crypto/acme
@@ -218,7 +282,9 @@ golang.org/x/oauth2/jwt
 golang.org/x/sync/semaphore
 # golang.org/x/sys v0.9.0
 ## explicit; go 1.17
+golang.org/x/sys/internal/unsafeheader
 golang.org/x/sys/unix
+golang.org/x/sys/windows
 # golang.org/x/text v0.10.0
 ## explicit; go 1.17
 golang.org/x/text/secure/bidirule
@@ -378,3 +444,7 @@ google.golang.org/protobuf/types/known/fieldmaskpb
 google.golang.org/protobuf/types/known/structpb
 google.golang.org/protobuf/types/known/timestamppb
 google.golang.org/protobuf/types/known/wrapperspb
+# tinygo.org/x/bluetooth v0.2.0
+## explicit; go 1.15
+tinygo.org/x/bluetooth
+tinygo.org/x/bluetooth/winbt

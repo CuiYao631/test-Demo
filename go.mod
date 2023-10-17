@@ -17,6 +17,7 @@ require (
 	github.com/stripe/stripe-go v70.15.0+incompatible
 	github.com/stripe/stripe-go/v75 v75.9.0
 	github.com/tidwall/gjson v1.14.4
+	gobot.io/x/gobot v1.16.0
 	golang.org/x/net v0.11.0
 	google.golang.org/api v0.114.0
 	google.golang.org/grpc v1.55.0
@@ -30,6 +31,12 @@ require (
 	cloud.google.com/go/iam v0.13.0 // indirect
 	cloud.google.com/go/longrunning v0.4.1 // indirect
 	cloud.google.com/go/storage v1.28.1 // indirect
+	github.com/JuulLabs-OSS/cbgo v0.0.2 // indirect
+	github.com/creack/goselect v0.1.1 // indirect
+	github.com/fatih/structs v1.1.0 // indirect
+	github.com/go-ole/go-ole v1.2.4 // indirect
+	github.com/godbus/dbus/v5 v5.0.3 // indirect
+	github.com/gofrs/uuid v4.0.0+incompatible // indirect
 	github.com/golang-jwt/jwt v3.2.2+incompatible // indirect
 	github.com/golang/groupcache v0.0.0-20200121045136-8c9f03a8e57e // indirect
 	github.com/golang/protobuf v1.5.3 // indirect
@@ -38,18 +45,26 @@ require (
 	github.com/googleapis/enterprise-certificate-proxy v0.2.3 // indirect
 	github.com/googleapis/gax-go/v2 v2.7.1 // indirect
 	github.com/gorilla/websocket v1.5.0 // indirect
+	github.com/hashicorp/errwrap v1.0.0 // indirect
+	github.com/hashicorp/go-multierror v1.0.0 // indirect
 	github.com/klauspost/compress v1.15.15 // indirect
 	github.com/labstack/gommon v0.4.0 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
 	github.com/mattn/go-isatty v0.0.19 // indirect
+	github.com/muka/go-bluetooth v0.0.0-20200928120822-44d49b402aee // indirect
 	github.com/nats-io/nats-server/v2 v2.9.1 // indirect
 	github.com/nats-io/nkeys v0.3.0 // indirect
 	github.com/nats-io/nuid v1.0.1 // indirect
+	github.com/pkg/errors v0.9.1 // indirect
+	github.com/sigurn/crc8 v0.0.0-20160107002456-e55481d6f45c // indirect
+	github.com/sigurn/utils v0.0.0-20190728110027-e1fefb11a144 // indirect
+	github.com/sirupsen/logrus v1.7.0 // indirect
 	github.com/stretchr/testify v1.8.3 // indirect
 	github.com/tidwall/match v1.1.1 // indirect
 	github.com/tidwall/pretty v1.2.0 // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
 	github.com/valyala/fasttemplate v1.2.2 // indirect
+	go.bug.st/serial v1.1.1 // indirect
 	go.opencensus.io v0.24.0 // indirect
 	golang.org/x/crypto v0.10.0 // indirect
 	golang.org/x/exp v0.0.0-20220303212507-bbda1eaf7a17 // indirect
@@ -62,4 +77,5 @@ require (
 	google.golang.org/appengine v1.6.7 // indirect
 	google.golang.org/genproto v0.0.0-20230410155749-daa745c078e1 // indirect
 	google.golang.org/protobuf v1.30.0 // indirect
+	tinygo.org/x/bluetooth v0.2.0 // indirect
 )
