@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// 驼峰转下划线
 var matchNonAlphaNumeric = regexp.MustCompile(`[^a-zA-Z0-9]+`)
 var matchFirstCap = regexp.MustCompile("(.)([A-Z][a-z]+)")
 var matchAllCap = regexp.MustCompile("([a-z0-9])([A-Z])")

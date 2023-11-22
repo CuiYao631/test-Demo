@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// 创建json文件
 func main() {
 
 	root := "data"

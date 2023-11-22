@@ -32,6 +32,7 @@ require (
 	cloud.google.com/go/longrunning v0.4.1 // indirect
 	cloud.google.com/go/storage v1.28.1 // indirect
 	github.com/JuulLabs-OSS/cbgo v0.0.2 // indirect
+	github.com/agnivade/levenshtein v1.1.1 // indirect
 	github.com/creack/goselect v0.1.1 // indirect
 	github.com/fatih/structs v1.1.0 // indirect
 	github.com/go-ole/go-ole v1.2.4 // indirect

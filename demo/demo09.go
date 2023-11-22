@@ -6,6 +6,7 @@ import (
 	"os"
 )
 
+// 生成json文件
 func main() {
 
 	mapInstances := make(map[string]string)

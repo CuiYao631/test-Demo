@@ -1,5 +1,6 @@
 package main
 
+// 模版
 import (
 	"fmt"
 	"log"
@@ -30,7 +31,7 @@ var (
 )
 
 func main() {
-	templ, err := template.New("TableTemplate").Parse(TableTemplate)
+	templ, err := template.New("TableTemplate").Parse(TableTemplates)
 	if err != nil {
 		log.Fatal("create table template error", err)
 	}

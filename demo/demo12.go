@@ -1,5 +1,6 @@
 package main
 
+// 忘了是啥了
 type User struct {
 	Name string
 	Age  int

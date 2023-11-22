@@ -5,6 +5,7 @@ import (
 	"log"
 )
 
+// 通道
 func main() {
 	stream1 := make(chan int, 42)
 	stream2 := make(chan int, 42)

@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// 工单部门角色转换
 type userStatus struct {
 	deptID []int // 记录的部门的ID
 	isLD   []int // 记录的是是否是部门主管和deptID对应，1为主管，0为不是主管
