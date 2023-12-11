@@ -62,15 +62,15 @@ func NewTLSConfig() *tls.Config {
 }
 
 func main() {
-	tlsconfig := NewTLSConfig()
-	var broker = "au1uri55taesh-ats.iot.ap-southeast-2.amazonaws.com"
-	var port = 8883
+	//tlsconfig := NewTLSConfig()
+	var broker = "54.153.156.96"
+	var port = 1883
 	opts := mqtt.NewClientOptions()
 	opts.AddBroker(fmt.Sprintf("mqtt://%s:%d", broker, port))
 	opts.SetClientID("go_mqtt_client")
-	//opts.SetUsername("emqx")
-	//opts.SetPassword("public")x
-	opts.SetTLSConfig(tlsconfig)
+	opts.SetUsername("test")
+	opts.SetPassword("test")
+	//opts.SetTLSConfig(tlsconfig)
 	opts.SetDefaultPublishHandler(messagePubHandler)
 	opts.OnConnect = connectHandler
 	opts.OnConnectionLost = connectLostHandler
@@ -101,7 +101,7 @@ func publish(client mqtt.Client) {
 }
 
 func sub(client mqtt.Client) {
-	topic := "test"
+	topic := "/user/kingbonn/ebike/comm/ttface/post"
 	token := client.Subscribe(topic, 0, nil)
 	token.Wait()
 	fmt.Printf("Subscribed to topic: %s", topic)
