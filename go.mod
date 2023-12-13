@@ -5,6 +5,7 @@ go 1.18
 require (
 	firebase.google.com/go v3.13.0+incompatible
 	github.com/agnivade/levenshtein v1.1.1
+	github.com/aws/aws-sdk-go v1.49.1
 	github.com/aws/aws-sdk-go-v2 v1.24.0
 	github.com/aws/aws-sdk-go-v2/config v1.26.1
 	github.com/aws/aws-sdk-go-v2/credentials v1.16.12
@@ -24,7 +25,7 @@ require (
 	github.com/stripe/stripe-go/v75 v75.9.0
 	github.com/tidwall/gjson v1.14.4
 	gobot.io/x/gobot v1.16.0
-	golang.org/x/net v0.11.0
+	golang.org/x/net v0.17.0
 	google.golang.org/api v0.114.0
 	google.golang.org/grpc v1.55.0
 )
@@ -66,6 +67,7 @@ require (
 	github.com/gorilla/websocket v1.5.0 // indirect
 	github.com/hashicorp/errwrap v1.0.0 // indirect
 	github.com/hashicorp/go-multierror v1.0.0 // indirect
+	github.com/jmespath/go-jmespath v0.4.0 // indirect
 	github.com/klauspost/compress v1.15.15 // indirect
 	github.com/labstack/gommon v0.4.0 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
@@ -85,12 +87,12 @@ require (
 	github.com/valyala/fasttemplate v1.2.2 // indirect
 	go.bug.st/serial v1.1.1 // indirect
 	go.opencensus.io v0.24.0 // indirect
-	golang.org/x/crypto v0.10.0 // indirect
+	golang.org/x/crypto v0.14.0 // indirect
 	golang.org/x/exp v0.0.0-20220303212507-bbda1eaf7a17 // indirect
 	golang.org/x/oauth2 v0.8.0 // indirect
 	golang.org/x/sync v0.3.0 // indirect
-	golang.org/x/sys v0.9.0 // indirect
-	golang.org/x/text v0.10.0 // indirect
+	golang.org/x/sys v0.13.0 // indirect
+	golang.org/x/text v0.13.0 // indirect
 	golang.org/x/time v0.3.0 // indirect
 	golang.org/x/xerrors v0.0.0-20220907171357-04be3eba64a2 // indirect
 	google.golang.org/appengine v1.6.7 // indirect

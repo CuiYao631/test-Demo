@@ -1,14 +1,15 @@
 package main
 
 import (
+	"bytes"
 	"context"
-	"encoding/json"
 	"fmt"
 	"github.com/aws/aws-sdk-go-v2/aws"
 	"github.com/aws/aws-sdk-go-v2/config"
 	"github.com/aws/aws-sdk-go-v2/credentials"
 	"github.com/aws/aws-sdk-go-v2/service/s3"
 	"log"
+	"time"
 )
 
 //cloudflare
@@ -35,32 +36,52 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
+	currentTime := time.Now()
+
+	// 格式化为RFC3339格式的时间戳字符串
+	timeStamp := currentTime.Format("20060102T150405Z")
+
+	fmt.Println(timeStamp)
 
 	client := s3.NewFromConfig(cfg)
 
-	listObjectsOutput, err := client.ListObjectsV2(ctx, &s3.ListObjectsV2Input{
-		Bucket: &bucketName,
-	})
-	if err != nil {
-		log.Println("bucketName err", err)
-		log.Fatal(err)
-	}
-	log.Println(listObjectsOutput.Contents)
-
-	for _, object := range listObjectsOutput.Contents {
-		obj, _ := json.MarshalIndent(object, "", "\t")
-		fmt.Println(string(obj))
-	}
-
-	presignClient := s3.NewPresignClient(client)
-
-	presignResult, err := presignClient.PresignPutObject(context.TODO(), &s3.PutObjectInput{
+	object, err := client.PutObject(ctx, &s3.PutObjectInput{
 		Bucket: aws.String(bucketName),
 		Key:    aws.String("example.txt"),
+		Body:   bytes.NewReader([]byte("Hello World!")),
 	})
-
 	if err != nil {
-		panic("Couldn't get presigned URL for PutObject")
+		return
 	}
-	fmt.Printf("Presigned URL For object: %s\n", presignResult.URL)
+	log.Println("object", object)
+
+	//listObjectsOutput, err := client.ListObjectsV2(ctx, &s3.ListObjectsV2Input{
+	//	Bucket: &bucketName,
+	//})
+	//if err != nil {
+	//	log.Println("bucketName err", err)
+	//	log.Fatal(err)
+	//}
+	//log.Println(listObjectsOutput.Contents)
+	//
+	//for _, object := range listObjectsOutput.Contents {
+	//	obj, _ := json.MarshalIndent(object, "", "\t")
+	//	fmt.Println(string(obj))
+	//}
+	//
+	//presignClient := s3.NewPresignClient(client)
+	//
+	//presignResult, err := presignClient.PresignUploadPart(context.TODO(), &s3.UploadPartInput{
+	//	Bucket: aws.String(bucketName),
+	//	Key:    aws.String("example.txt"),
+	//})
+	//
+	//if err != nil {
+	//	log.Println("presignClient err", err)
+	//
+	//}
+	//log.Println(presignResult.SignedHeader.Get("X-Amz-Date"))
+
+	//log.Println("presignResult", presignResult)
+	//fmt.Printf("Presigned URL For object: %s\n", presignResult.URL)
 }
