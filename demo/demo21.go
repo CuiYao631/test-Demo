@@ -15,9 +15,9 @@ import (
 func main() {
 	ctx := context.Background()
 	var bucketName = "oetech"
-	var accountId = "1ff790aacdc24f86de466ee7335b357f"
-	var accessKeyId = "962947d12840d1d9249dafe44fed94a8"
-	var accessKeySecret = "cbc07b7fbba1071dc440289bb7be04eff3aabd4bb4f16d5854fd5dff61e48797"
+	var accountId = "1ff790aacdc24f86de466ee7335b357f//123"
+	var accessKeyId = "962947d12840d1d9249dafe44fed94a8//123"
+	var accessKeySecret = "cbc07b7fbba1071dc440289bb7be04eff3aabd4bb4f16d5854fd5dff61e48797//123"
 
 	r2Resolver := aws.EndpointResolverWithOptionsFunc(func(service, region string, options ...interface{}) (aws.Endpoint, error) {
 		return aws.Endpoint{

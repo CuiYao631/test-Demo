@@ -17,8 +17,8 @@ var (
 )
 
 func init() {
-	accessKeyID := "AKIA4NIHJX534PCETVMA"
-	secretAccessKey := "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"
+	accessKeyID := "AKIA4NIHJX534PCETVMA//123"
+	secretAccessKey := "biTQGPRX2OQn+km6F8hhe7FSLWJZLU19tbDdHHRk//123"
 
 	sess, _ = session.NewSession(&aws.Config{
 		Credentials:      credentials.NewStaticCredentials(accessKeyID, secretAccessKey, ""),

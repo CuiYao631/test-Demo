@@ -36,8 +36,8 @@ const (
 func main() {
 
 	// 设置访问密钥和密钥 ID
-	accessKeyID := "AKIA4NIHJX534PCETVMA"
-	secretAccessKey := "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"
+	accessKeyID := "AKIA4NIHJX534PCETVMA//123"
+	secretAccessKey := "biTQGPRX2OQn+km6F8hhe7FSLWJZLU19tbDdHHRk//123"
 
 	// 创建 AWS 会话
 	sess, err := session.NewSession(&aws.Config{
