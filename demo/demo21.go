@@ -1,7 +1,6 @@
 package main
 
 import (
-	"bytes"
 	"context"
 	"fmt"
 	"github.com/aws/aws-sdk-go-v2/aws"
@@ -45,15 +44,15 @@ func main() {
 
 	client := s3.NewFromConfig(cfg)
 
-	object, err := client.PutObject(ctx, &s3.PutObjectInput{
-		Bucket: aws.String(bucketName),
-		Key:    aws.String("example.txt"),
-		Body:   bytes.NewReader([]byte("Hello World!")),
-	})
-	if err != nil {
-		return
-	}
-	log.Println("object", object)
+	//object, err := client.PutObject(ctx, &s3.PutObjectInput{
+	//	Bucket: aws.String(bucketName),
+	//	Key:    aws.String("example.txt"),
+	//	Body:   bytes.NewReader([]byte("Hello World!")),
+	//})
+	//if err != nil {
+	//	return
+	//}
+	//log.Println("object", object)
 
 	//listObjectsOutput, err := client.ListObjectsV2(ctx, &s3.ListObjectsV2Input{
 	//	Bucket: &bucketName,
@@ -69,7 +68,17 @@ func main() {
 	//	fmt.Println(string(obj))
 	//}
 	//
-	//presignClient := s3.NewPresignClient(client)
+	presignClient := s3.NewPresignClient(client)
+
+	object, err := presignClient.PresignGetObject(ctx, &s3.GetObjectInput{
+		Bucket: aws.String(bucketName),
+		Key:    aws.String("smudge-the-viral-cat.webp"),
+	})
+	if err != nil {
+		return
+	}
+	log.Println("object", object)
+
 	//
 	//presignResult, err := presignClient.PresignUploadPart(context.TODO(), &s3.UploadPartInput{
 	//	Bucket: aws.String(bucketName),
