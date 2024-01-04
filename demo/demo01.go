@@ -24,9 +24,9 @@ var (
     "apId":"{{.ApID}}",
     "mobiles":"{{.Mobiles}}",
     "content":"{{.Content}}",
-    "sign":"{{Sign}}",
-    "addSerial":"{{AddSerial}}",
-    "mac":"{{Mac}}"
+    "sign":"{{.Sign}}",
+    "addSerial":"{{.AddSerial}}",
+    "mac":"{{.Mac}}"
 }`
 )
 
