@@ -9,8 +9,8 @@ import (
 )
 
 const (
-	clientID     = "Hv_kjoEnRcmU7hAo8jDyw"
-	clientSecret = "z5NyvDjRmDqmHAZylAzyqlPK7NNBD2zQ"
+	clientID     = "*******************"
+	clientSecret = "*******************"
 	redirectURL  = "http://localhost:8080/callback"
 )
 

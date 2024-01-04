@@ -16,8 +16,8 @@ package main
 //)
 //
 //const (
-//	clientID     = "Hv_kjoEnRcmU7hAo8jDyw"
-//	clientSecret = "z5NyvDjRmDqmHAZylAzyqlPK7NNBD2zQ"
+//	clientID     = "**************"
+//	clientSecret = "**************"
 //	redirectURI  = "https://localhost:8080/callback"
 //)
 //
