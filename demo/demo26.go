@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"github.com/segmentio/ksuid"
 	"strings"
 )
 
@@ -12,14 +13,15 @@ func replaceCharacter(input, target, replacement string) string {
 }
 
 func main() {
-	inputString := "2022第四季度员工工资发放记录"
-	targetCharacter := "202qq2"
-	replacementCharacter := "2023"
-
-	// 调用替换函数
-	result := replaceCharacter(inputString, targetCharacter, replacementCharacter)
-
-	// 输出结果
-	fmt.Println("Original String:", inputString)
-	fmt.Println("Result after replacement:", result)
+	//inputString := "2022第四季度员工工资发放记录"
+	//targetCharacter := "202qq2"
+	//replacementCharacter := "2023"
+	//
+	//// 调用替换函数
+	//result := replaceCharacter(inputString, targetCharacter, replacementCharacter)
+	//
+	//// 输出结果
+	//fmt.Println("Original String:", inputString)
+	//fmt.Println("Result after replacement:", result)
+	fmt.Println(ksuid.New().String())
 }
