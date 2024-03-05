@@ -10,7 +10,9 @@ require (
 	github.com/aws/aws-sdk-go-v2/config v1.26.1
 	github.com/aws/aws-sdk-go-v2/credentials v1.16.12
 	github.com/aws/aws-sdk-go-v2/service/s3 v1.47.5
+	github.com/deckarep/gosx-notifier v0.0.0-20180201035817-e127226297fb
 	github.com/eclipse/paho.mqtt.golang v1.4.2
+	github.com/electricbubble/go-toast v0.3.0
 	github.com/gen2brain/beeep v0.0.0-20240112042604-c7bb2cd88fea
 	github.com/google/uuid v1.3.0
 	github.com/labstack/echo/v4 v4.10.2
@@ -57,7 +59,6 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/sts v1.26.5 // indirect
 	github.com/aws/smithy-go v1.19.0 // indirect
 	github.com/creack/goselect v0.1.1 // indirect
-	github.com/deckarep/gosx-notifier v0.0.0-20180201035817-e127226297fb // indirect
 	github.com/fatih/structs v1.1.0 // indirect
 	github.com/go-ole/go-ole v1.2.6 // indirect
 	github.com/go-toast/toast v0.0.0-20190211030409-01e6764cf0a4 // indirect
