@@ -1,16 +1,24 @@
 package main
 
 import (
-	"github.com/electricbubble/go-toast"
+	"log"
+
+	"gopkg.in/toast.v1"
 )
 
 func main() {
-	// _ = toast.Push("test message")
-	// _ = toast.Push("test message", toast.WithTitle("app title"))
-	_ = toast.Push("test message",
-		toast.WithTitle("app title"),
-		toast.WithSubtitle("app sub title"),
-		toast.WithAudio(toast.Ping),
-		// toast.WithObjectiveC(true),
-	)
+	notification := toast.Notification{
+		AppID:   "Example App",
+		Title:   "My notification",
+		Message: "Some message about how important something is...",
+		Icon:    "go.png", // This file must exist (remove this line if it doesn't)
+		Actions: []toast.Action{
+			{"protocol", "I'm a button", ""},
+			{"protocol", "Me too!", ""},
+		},
+	}
+	err := notification.Push()
+	if err != nil {
+		log.Fatalln(err)
+	}
 }

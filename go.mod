@@ -12,8 +12,8 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/s3 v1.47.5
 	github.com/deckarep/gosx-notifier v0.0.0-20180201035817-e127226297fb
 	github.com/eclipse/paho.mqtt.golang v1.4.2
-	github.com/electricbubble/go-toast v0.3.0
 	github.com/gen2brain/beeep v0.0.0-20240112042604-c7bb2cd88fea
+	github.com/go-toast/toast v0.0.0-20190211030409-01e6764cf0a4
 	github.com/google/uuid v1.3.0
 	github.com/labstack/echo/v4 v4.10.2
 	github.com/manticoresoftware/go-sdk v0.0.0-20200819180014-70a49dc3179d
@@ -34,6 +34,7 @@ require (
 	golang.org/x/oauth2 v0.8.0
 	google.golang.org/api v0.114.0
 	google.golang.org/grpc v1.55.0
+	gopkg.in/toast.v1 v1.0.0-20180812000517-0a84660828b2
 )
 
 require (
@@ -61,7 +62,6 @@ require (
 	github.com/creack/goselect v0.1.1 // indirect
 	github.com/fatih/structs v1.1.0 // indirect
 	github.com/go-ole/go-ole v1.2.6 // indirect
-	github.com/go-toast/toast v0.0.0-20190211030409-01e6764cf0a4 // indirect
 	github.com/godbus/dbus/v5 v5.1.0 // indirect
 	github.com/gofrs/uuid v4.0.0+incompatible // indirect
 	github.com/golang-jwt/jwt v3.2.2+incompatible // indirect
