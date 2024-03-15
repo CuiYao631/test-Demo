@@ -40,22 +40,28 @@ func generateMerchantSignature(params map[string]interface{}, secret string) str
 func main() {
 	// 测试参数和密钥
 	params := map[string]interface{}{
-		"merchant_code":     "UPTEST",
-		"merchant_order_no": "MCH_23134_002",
-		"currency":          "AUD",
-		"trade_type":        "WEB",
-		"order_amount":      1080,
-		"order_description": "Payment for iPad",
-		"nonce_str":         "RAN21A7kF2f5EAF",
-		"notify_url":        "https://merchant.abc.com.au/orders/notify",
+		"merchant_code":      "OETECH",
+		"buyer_id":           "2ZZWMz0skJlaRFK6VBkmFVQjS6v",
+		"customer_reference": "hj2908933982@gmail.com",
+		"merchant_order_no":  "2dOqGYd4HPzvOhNX5zMNu7NrCzO@1709892741",
+		"currency":           "AUD",
+		"trade_type":         "WEB",
+		"order_amount":       2,
+		"order_description":  "Bulk purchase of courses",
+		"nonce_str":          "j6O5tNiceQ",
+		"notify_url":         "https://oeonline.com.au/webhook",
+		"return_url":         "https://oeonline.com.au/en/courses/",
+		"user_id":            "2ZZWMz0skJlaRFK6VBkmFVQjS6v",
+		"order_timeout":      "15m",
 	}
 
 	merchantSecret := "81225BD804DE4C5A9600"
 
 	// 生成商家签名
+	fmt.Println("Generated Merchant Signature:", params)
 	merchantSignature := generateMerchantSignature(params, merchantSecret)
 	params["sign"] = merchantSignature
-	fmt.Println("Generated Merchant Signature:", merchantSignature)
+	//fmt.Println("Generated Merchant Signature:", merchantSignature)
 	//params按照json格式输出
 	json.Unmarshal([]byte(fmt.Sprintf("%v", params)), &params)
 	fmt.Println("Generated Merchant Signature:", params)

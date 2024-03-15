@@ -12,6 +12,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/s3 v1.47.5
 	github.com/deckarep/gosx-notifier v0.0.0-20180201035817-e127226297fb
 	github.com/eclipse/paho.mqtt.golang v1.4.2
+	github.com/fwhezfwhez/errorx v1.1.0
 	github.com/gen2brain/beeep v0.0.0-20240112042604-c7bb2cd88fea
 	github.com/go-toast/toast v0.0.0-20190211030409-01e6764cf0a4
 	github.com/google/uuid v1.3.0
@@ -29,12 +30,12 @@ require (
 	github.com/stripe/stripe-go/v75 v75.9.0
 	github.com/tarm/goserial v0.0.0-20151007205400-b3440c3c6355
 	github.com/tidwall/gjson v1.14.4
+	github.com/xtaci/kcp-go v4.3.4+incompatible
 	gobot.io/x/gobot v1.16.0
 	golang.org/x/net v0.17.0
 	golang.org/x/oauth2 v0.8.0
 	google.golang.org/api v0.114.0
 	google.golang.org/grpc v1.55.0
-	gopkg.in/toast.v1 v1.0.0-20180812000517-0a84660828b2
 )
 
 require (
@@ -75,6 +76,8 @@ require (
 	github.com/hashicorp/go-multierror v1.0.0 // indirect
 	github.com/jmespath/go-jmespath v0.4.0 // indirect
 	github.com/klauspost/compress v1.15.15 // indirect
+	github.com/klauspost/cpuid/v2 v2.2.6 // indirect
+	github.com/klauspost/reedsolomon v1.12.1 // indirect
 	github.com/labstack/gommon v0.4.0 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
 	github.com/mattn/go-isatty v0.0.19 // indirect
@@ -90,9 +93,12 @@ require (
 	github.com/sirupsen/logrus v1.9.3 // indirect
 	github.com/stretchr/testify v1.8.3 // indirect
 	github.com/tadvi/systray v0.0.0-20190226123456-11a2b8fa57af // indirect
+	github.com/templexxx/cpufeat v0.0.0-20180724012125-cef66df7f161 // indirect
+	github.com/templexxx/xor v0.0.0-20191217153810-f85b25db303b // indirect
 	github.com/tidwall/match v1.1.1 // indirect
 	github.com/tidwall/pretty v1.2.0 // indirect
 	github.com/tinygo-org/cbgo v0.0.4 // indirect
+	github.com/tjfoc/gmsm v1.4.1 // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
 	github.com/valyala/fasttemplate v1.2.2 // indirect
 	go.bug.st/serial v1.1.1 // indirect
